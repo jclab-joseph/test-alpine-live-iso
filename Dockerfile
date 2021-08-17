@@ -17,7 +17,7 @@ COPY [ "alpine-chroot-install", "/opt/alpine-chroot-install" ]
 
 ARG TARGET_ARCH=x86_64
 
-RUN PACKAGES="bash ca-certificates curl gawk blkid util-linux mkinitfs efibootmgr dosfstools ethtool iproute2 dhcpcd sed wget tar xz gzip openssh-client openssh-server openssh-sftp-server linux-lts linux-firmware-none grub grub-bios grub-efi" && \
+RUN PACKAGES="bash ca-certificates curl gawk blkid util-linux mkinitfs efibootmgr dosfstools ethtool iproute2 dhcpcd sed wget tar xz gzip openssh-client openssh-server openssh-sftp-server linux-lts linux-firmware-none grub grub-bios grub-efi e2fsprogs" && \
     mkdir -p /work/rootfs && \
     chmod +x /opt/alpine-chroot-install && \
     /opt/alpine-chroot-install \
